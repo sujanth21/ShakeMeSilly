@@ -9,17 +9,62 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var timerLabel: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var startBtn: UIButton!
+    
+    var timer = Timer()
+    var timeInt = 10
+    var scoreInt = 0
+    var imageInt = 1
+    var modeInt = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    
+    @IBAction func startBtnPressed(_ sender: Any) {
+        
+        if timeInt == 10 {
+            timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(startCounter), userInfo: nil, repeats: true)
+            
+            modeInt = 1
+        }
+        
     }
-
+    
+    override func becomeFirstResponder() -> Bool {
+        return true
+    }
+    
+    override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
+        
+        if motion == .motionShake {
+            
+            if modeInt == 1 {
+                
+                scoreInt += 1
+                scoreLabel.text = String(scoreInt)
+            }
+        }
+    }
+    
+    
+    @objc func startCounter() {
+        
+        timeInt -= 1
+        timerLabel.text = String(timeInt)
+        
+        if timeInt == 0 {
+            timer.invalidate()
+            modeInt = 0
+        }
+    }
+    
 
 }
 

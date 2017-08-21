@@ -12,6 +12,7 @@
 		83FE26D71F4A2BF900EAC61B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83FE26D51F4A2BF900EAC61B /* Main.storyboard */; };
 		83FE26D91F4A2BF900EAC61B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83FE26D81F4A2BF900EAC61B /* Assets.xcassets */; };
 		83FE26DC1F4A2BF900EAC61B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83FE26DA1F4A2BF900EAC61B /* LaunchScreen.storyboard */; };
+		83FE26E41F4A2CAF00EAC61B /* edosz.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 83FE26E31F4A2CAF00EAC61B /* edosz.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		83FE26D81F4A2BF900EAC61B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		83FE26DB1F4A2BF900EAC61B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		83FE26DD1F4A2BF900EAC61B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83FE26E31F4A2CAF00EAC61B /* edosz.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = edosz.ttf; path = "../../../../../../Downloads/Shake Me Silly/edosz.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				83FE26D51F4A2BF900EAC61B /* Main.storyboard */,
 				83FE26D81F4A2BF900EAC61B /* Assets.xcassets */,
 				83FE26DA1F4A2BF900EAC61B /* LaunchScreen.storyboard */,
+				83FE26E31F4A2CAF00EAC61B /* edosz.ttf */,
 				83FE26DD1F4A2BF900EAC61B /* Info.plist */,
 			);
 			path = ShakeMeSilly;
@@ -124,6 +127,7 @@
 			files = (
 				83FE26DC1F4A2BF900EAC61B /* LaunchScreen.storyboard in Resources */,
 				83FE26D91F4A2BF900EAC61B /* Assets.xcassets in Resources */,
+				83FE26E41F4A2CAF00EAC61B /* edosz.ttf in Resources */,
 				83FE26D71F4A2BF900EAC61B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
