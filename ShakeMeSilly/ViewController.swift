@@ -41,6 +41,7 @@ class ViewController: UIViewController {
             
             scoreLabel.text = String(scoreInt)
             timerLabel.text = String(timeInt)
+            imageView.image = UIImage(named: "Maracas1")
             
             startBtn.setTitle("Start Game", for: .normal)
         }
@@ -59,6 +60,14 @@ class ViewController: UIViewController {
                 
                 scoreInt += 1
                 scoreLabel.text = String(scoreInt)
+                
+                imageInt += 1
+                
+                if imageInt == 5 {
+                    imageInt = 1
+                }
+                
+                imageView.image = UIImage(named: "Maracas\(imageInt)")
             }
         }
     }
