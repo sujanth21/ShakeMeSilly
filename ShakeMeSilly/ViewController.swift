@@ -33,6 +33,16 @@ class ViewController: UIViewController {
             timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(startCounter), userInfo: nil, repeats: true)
             
             modeInt = 1
+            startBtn.isEnabled = false
+            startBtn.alpha = 0.25
+        } else if timeInt == 0 {
+            scoreInt = 0
+            timeInt = 10
+            
+            scoreLabel.text = String(scoreInt)
+            timerLabel.text = String(timeInt)
+            
+            startBtn.setTitle("Start Game", for: .normal)
         }
         
     }
@@ -62,8 +72,13 @@ class ViewController: UIViewController {
         if timeInt == 0 {
             timer.invalidate()
             modeInt = 0
+            startBtn.isEnabled = true
+            startBtn.alpha = 1.0
+            startBtn.setTitle("Restart Game", for: .normal)
         }
     }
+    
+    
     
 
 }
